@@ -19,6 +19,13 @@ class homePage {
     {
         return cy.get("h1:nth-child(1)")
     }
+
+    clickAddToCart()
+    {
+        const addToCartBtn = cy.get('[name=Submit]')
+        addToCartBtn.click() 
+    }
+
 }
 
 export default homePage

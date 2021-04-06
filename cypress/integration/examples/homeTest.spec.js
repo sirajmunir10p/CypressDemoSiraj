@@ -23,5 +23,7 @@ describe('Test Suite', function() {
         homepage.ProductHeading.should('have.text', 'Faded Short Sleeve T-shirts')
         homepage.ProductHeading.invoke('text').should('contain', 'Faded ') //Another way to assert
         homepage.ProductHeading.invoke('text').should('include', 'Faded Short Sleeve T-shirts') //Another way to assert
+        homepage.clickAddToCart()
+        cy.title().should('be.equal', 'Faded Short Sleeve T-shirts - My Store')
     })
 })
